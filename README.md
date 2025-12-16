@@ -1,4 +1,6 @@
-# ASTE404 Mini-Project: Electric Propulsion Optimization Tool
+# Electric Propulsion Optimization Tool
+###  ASTE404 Mini-Project 
+###  Faith Colon 
 ## Overview
 
 Purpose of tool **"To choose Electric Propulsion thruster configuration that maximizes payload for given mission**
