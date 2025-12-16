@@ -42,7 +42,7 @@ def find_optimal_isp(alpha, delta_v, eta, tb, g):
         optimal_payload: The maximum payload mass ratio
     """
     # Function to minimize (negative payload ratio since we are maximizing)
-    def neg_payload(isp):
+    def neg_payload(isp): # negative payload ratio to use minimize_scalar (finds maximum point b
         return -payload_ratio(isp, alpha, delta_v, eta, tb, g)
 
     # Use Golden-Section Search to find the peak (0 < Isp < 10000 s)
@@ -121,7 +121,7 @@ def optimize_thruster(delta_v, tb, g):
         (100, 9000)      # Isp: Specific impulse range
     ]
 
-    # Initial guess for the parameters, using midpoint of bounds (reccomended)
+    # Initial guess for the parameters, using midpoint of bounds (12/13: reccomended because at boundaries, likely to see negative payload ratios)
     initial_guess = initial_guess = [
         (bounds[0][0] + bounds[0][1]) / 2,  # Alpha midpoint
         (bounds[1][0] + bounds[1][1]) / 2,  # Eta midpoint

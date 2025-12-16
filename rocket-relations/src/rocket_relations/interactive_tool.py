@@ -15,19 +15,23 @@ def interactive_tool():
 
     # Step 1: Prompt for Mission Requirements
     while True:
-        delta_v = float(input("Enter the required Delta-V (m/s) [range: 5000-15000]: "))
-        if 5000 <= delta_v <= 15000:
-            break
-        else:
-            print("Error: Delta-V must be within the range of 5000 to 15000 m/s.")
-        
+        try:
+            delta_v = float(input("Enter the required Delta-V (m/s) [range: 5000-15000]: "))
+            if 5000 <= delta_v <= 15000:
+                break
+            else:
+                print("Error: Delta-V must be within the range of 5000 to 15000 m/s.")
+        except ValueError:
+            print("Error: Please enter a valid number for Delta-V.")
     while True:
-        td = float(input("Enter the mission duration (burn time, in days) [range:20-200]: "))
-        if 20<=td<=200:
-            break
-        else:
-            print("Error: Mission duration must be within the range of 20 to 200 days.")
-        
+        try:
+            td = float(input("Enter the mission duration (burn time, in days) [range:20-200]: ")) # range taken from approx Moon to Mars mission durations
+            if 20<=td<=200:
+                break
+            else:
+                print("Error: Mission duration must be within the range of 20 to 200 days.")
+        except ValueError:
+            print("Error: Please enter a valid number for mission duration.")
     tb = td * 86400  # Convert burn time from days to seconds
     g = 9.81  # Gravitational constant in m/s²
 
@@ -50,17 +54,15 @@ def interactive_tool():
                  print("Error: Structural mass ratio α must be within the range of 0.0015 to 0.266 Kg/W.")
             except ValueError:
                 print("Error: Please enter a valid number for α.")
-                 
         while True:
             try:
-             eta = float(input("Enter thruster efficiency η (0-1, e.g., 0.8): "))
+             eta = float(input("Enter thruster efficiency η (value between 0 and 1): "))
              if 0 <= eta <= 1:
                  break
              else:
                  print("Error: Thruster efficiency η must be between 0 and 1.")
             except ValueError:
                 print("Error: Please enter a valid number for η.")  
-        
         
         # Perform optimization for a single configuration
         optimal_isp, optimal_payload = find_optimal_isp(alpha, delta_v, eta, tb, g)
@@ -190,7 +192,7 @@ def interactive_tool():
         plt.grid(True)
         plt.show()
 
-        print("\nRange-based analysis complete.")
+        print("\nMultiple Config Analysis Complete.")
         print(f"Alpha values tested: {alpha_values}")
         print(f"Efficiency values tested: {eta_values}")
     
