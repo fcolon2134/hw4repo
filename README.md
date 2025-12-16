@@ -26,23 +26,20 @@ And finds the configuration that maximizes payload ratio (M_L/M_0) for mission r
 ## Installation
 
 **1. Download and/or ensure required files are in same folder:**
-- `electric_propulsion.py` 
-- `interactive_tool.py`
+- `electric_propulsion.py` - Equations and core functions (minimize, and optimization) 
+- `interactive_tool.py`-  Interactive Tool file to prompt user inputs and display results
 
 Place both files in the same directory (if needed)
 
 **2. Install dependencies:**
-
-## Usage
-
-The main files are located in `src/rocket_relations/`:
-- `electric_propulsion.py` - Core functions
-- `interactive_tool.py` - Run this file
-
-### Requirements
 ```bash
 pip install numpy matplotlib scipy
 ```
+## Usage
+
+The main files are located in `src/rocket_relations/`:
+- `electric_propulsion.py` - core functions
+- `interactive_tool.py` - Run this file 
 
 ### Running the Interactive Tool
 ```bash
