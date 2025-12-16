@@ -3,7 +3,7 @@
 ###  Faith Colon 
 ## Overview
 
-Purpose of tool **"To choose Electric Propulsion thruster configuration that maximizes payload for given mission**
+Purpose of tool **"To choose Electric Propulsion thruster configuration that maximizes payload for given mission requirements"**
 
 It analyzes: 
 - Structural mass ratio (α) in kg/W
