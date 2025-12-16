@@ -25,6 +25,11 @@ And finds the configuration that maximizes payload ratio (M_L/M_0) for mission r
 - **Input Validation**: Prevents invalid/non-physical parameter combinations
 - **Smart Warnings**: Flags impossible missions with actionable suggestions
 
+## Folder Navigation
+Navigate to the correct folder
+```bash
+cd rocket-relations\src\rocket_relations
+```
 ## Installation
 
 **1. Download and/or ensure required files are in same folder:**
