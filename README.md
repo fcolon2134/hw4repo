@@ -34,9 +34,15 @@ Place both files in the same directory.
 pip install numpy scipy matplotlib
 
 ```
-**Usage**
+## Usage
 
-Navigate to the directory containing both files: (My directory is  C:\Users\faith\ASTE404\Homework5\rocket-relations\src\rocket_relations
-After, run:
+The main files are located in `src/rocket_relations/`:
+- `electric_propulsion.py` - Core functions
+- `interactive_tool.py` - Run this file
 
+Navigate to the directory and run: 
 
+```bash
+cd src/rocket_relations
+python interactive_tool.py
+```
