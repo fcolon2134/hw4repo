@@ -20,3 +20,23 @@ And finds the configuration that maximizes payload ratio (M_L/M_0) for mission r
 - **Visualization**:  Plots payload ratio vs. Isp with optimal points marked
 - **Input Validation**: Prevents invalid/non-physical parameter combinations
 - **Smart Warnings**: Flags impossible missions with actionable suggestions
+
+## Installation
+
+**1. Download required files:**
+- `electric_propulsion.py` 
+- `interactive_tool.py`
+
+Place both files in the same directory.
+
+**2. Install dependencies:**
+```bash
+pip install numpy scipy matplotlib
+
+```
+**Usage**
+
+Navigate to the directory containing both files: (My directory is  C:\Users\faith\ASTE404\Homework5\rocket-relations\src\rocket_relations
+After, run:
+
+
